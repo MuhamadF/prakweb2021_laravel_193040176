@@ -6,6 +6,7 @@
                 {{ $post->title }}
             </h2>
 
+            <p>Category : <a href="/categories/{{ $post->category->slug }}"> {{ $post->category->name }}</a></p>
             {!! $post->body !!}
         </article>
 
