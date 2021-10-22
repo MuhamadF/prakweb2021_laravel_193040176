@@ -21,13 +21,15 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        return [
+        return [ 
             'title' => $this->faker->sentence(mt_rand(3, 8)),
             'slug' => $this->faker->slug(),
             'excerpt' => $this->faker->paragraph(),
-            'body' => $this->faker->paragraph(mt_rand(3, 6)),
+            'body' => collect($this->faker->paragraphs(mt_rand(5,10)))
+                        ->map(fn($p) => "<p>$p</p>")
+                        ->implode(''),
             'user_id' => mt_rand(1,5),
-            'category_id' => mt_rand(1,2)
+            'category_id' => mt_rand(1,3)
         ];
     }
 }
