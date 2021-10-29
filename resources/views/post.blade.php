@@ -7,8 +7,8 @@
         <h2 class="mb-2">{{ $post->title }}</h2>
         <small class="text-muted">
             <p>
-                By <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in 
-                <a href="/categories/{{$post->category->slug}}" class="text-decoration-none">{{$post->category->name}}</a>
+                By <a href="/blog?author={{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in 
+                <a href="/blog?category={{$post->category->slug}}" class="text-decoration-none">{{$post->category->name}}</a>
             </p>
         </small>
         <img src="https://source.unsplash.com/800x400?{{$post->category->name}}" alt="{{$post->category->name}}" class="img-fluid">
