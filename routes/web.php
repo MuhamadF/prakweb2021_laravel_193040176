@@ -59,3 +59,5 @@ Route::get('/dashboard',function() {
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+Route::get('dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
