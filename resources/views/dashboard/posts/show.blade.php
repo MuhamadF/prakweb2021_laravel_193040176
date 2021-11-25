@@ -12,7 +12,6 @@
         </small>
         <img src="https://source.unsplash.com/800x400?{{$post->category->name}}" alt="{{$post->category->name}}" class="img-fluid mt-3">
         <article class="my-3">{!! $post->body !!}</article>
-        <a href="/blog" class="d-block mt-3 btn btn-primary my-5">Back to blog</a>
         </div>  
     </div>
 </div> 
